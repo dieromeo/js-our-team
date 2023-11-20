@@ -39,3 +39,10 @@ const membriGruppo = [
 ];
 
 
+for (let i = 0; i < membriGruppo.length; i++) {
+    const membro = membriGruppo[i];
+    console.log('membro 1:');
+    for (let key in membro) {
+        console.log(membro[key]);
+    }
+}
