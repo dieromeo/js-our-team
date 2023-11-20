@@ -1,5 +1,14 @@
 'use strict';
 
+// function
+
+function createElement(tag, className, content) { // funzione per creare elementi html
+    const newElement = document.createElement(tag);
+    newElement.classList.add(className);
+    newElement.innerText = content;
+    return newElement;
+}
+
 const membriGruppo = [ // array con i membri del gruppo
     {
         nome: 'Wayne Barnett',
@@ -41,16 +50,23 @@ const membriGruppo = [ // array con i membri del gruppo
 const teamContainer = document.querySelector('.team-container'); // div container
 
 for (let i = 0; i < membriGruppo.length; i++) { // cicla tutti i membri dell'array
-    const membro = membriGruppo[i];
+    const membro = membriGruppo[i]; // salvo il singolo membro
     console.log('membro', i);
-    const memberImage = document.createElement('img');
+    const card = createElement('div', 'card', '');
+    const imageContainer = createElement('div', 'image-container', '');
+    const teamInfo = createElement('div', 'team-info', '');
+    const memberImage = createElement('img', 'immagine', '');
     memberImage.src = 'img/' + membro['foto'];
-    teamContainer.append(memberImage);
+    teamContainer.append(card);
+    card.append(imageContainer);
+    card.append(teamInfo);
+    imageContainer.append(memberImage);
+    const name = createElement('p', 'name', `Nome:  ${membro['nome']}`);
+    const role = createElement('p', 'role', `Ruolo: ${membro['ruolo']}`);
+    teamInfo.append(name);
+    teamInfo.append(role);
 
     for (let key in membro) { // per ogni membro stampa i valori delle key e le aggiunge al dom
         console.log(membro[key]);
-        // const span = document.createElement('p');
-        // teamContainer.append(span);
-        // span.innerHTML = membro[key];
     }
 }

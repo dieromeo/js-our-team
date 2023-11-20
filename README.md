@@ -15,3 +15,7 @@ Utilizzando lo stesso ciclo for in vado ad appendere ad un div nel dom le varie 
 ### Bonus 1
 
 Creo con il for tanti elementi foto quant sono i membri del team, ed ad ognuno vado a dare coe source il contenuto della key foto.
+
+### bonus 2
+
+Sempre tramite l'utilizzo del ciclo for cado a creare i vari elementi da andare ad inserire nel dom per la creazione della card
