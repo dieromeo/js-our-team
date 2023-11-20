@@ -43,11 +43,14 @@ const teamContainer = document.querySelector('.team-container'); // div containe
 for (let i = 0; i < membriGruppo.length; i++) { // cicla tutti i membri dell'array
     const membro = membriGruppo[i];
     console.log('membro', i);
+    const memberImage = document.createElement('img');
+    memberImage.src = 'img/' + membro['foto'];
+    teamContainer.append(memberImage);
 
     for (let key in membro) { // per ogni membro stampa i valori delle key e le aggiunge al dom
         console.log(membro[key]);
-        const span = document.createElement('p');
-        teamContainer.append(span);
-        span.innerHTML = membro[key];
+        // const span = document.createElement('p');
+        // teamContainer.append(span);
+        // span.innerHTML = membro[key];
     }
 }
