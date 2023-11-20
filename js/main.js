@@ -1,6 +1,6 @@
 'use strict';
 
-const membriGruppo = [
+const membriGruppo = [ // array con i membri del gruppo
     {
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO',
@@ -38,11 +38,16 @@ const membriGruppo = [
     }
 ];
 
+const teamContainer = document.querySelector('.team-container'); // div container
 
-for (let i = 0; i < membriGruppo.length; i++) {
+for (let i = 0; i < membriGruppo.length; i++) { // cicla tutti i membri dell'array
     const membro = membriGruppo[i];
-    console.log('membro 1:');
-    for (let key in membro) {
+    console.log('membro', i);
+
+    for (let key in membro) { // per ogni membro stampa i valori delle key e le aggiunge al dom
         console.log(membro[key]);
+        const span = document.createElement('p');
+        teamContainer.append(span);
+        span.innerHTML = membro[key];
     }
 }

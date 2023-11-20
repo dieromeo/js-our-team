@@ -10,5 +10,4 @@ Creo un array, contenente degli oggetti, ognuno dei quali rappresenta un membro 
 Usando un ciclo `for in`, all'interno di un for che ciclo l'array, stampo in console per ogni membro le sue relative informazioni
 Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
+Utilizzando lo stesso ciclo for in vado ad appendere ad un div nel dom le varie informazioni dei membri 
